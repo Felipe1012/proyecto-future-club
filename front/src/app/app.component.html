@@ -1,74 +1,74 @@
-
-
 <body>
-
   <h1 class="title">
-    <img src="./assets/transmi.PNG" align="left" height=100px; weigth=199px; >
-    <img src="./assets/transmi2.PNG" align="right" height=100px; weigth=199px; >
-  <div class="title">
-    <h1 >Actualizaciones</h1>
-    <h2>¿Qué está diciendo la gente?</h2>
-  </div>
+    <img src="./assets/transmi.PNG" align="left" height=100px; weigth=199px;>
+
+    <img src="./assets/transmi2.PNG" align="right" height=100px; weigth=199px;>
+
+    <div class="title">
+      <h1>Actualizaciones</h1>
+      <h2>¿Qué está diciendo la gente?</h2>
+    </div>
   </h1>
 
-
-
   <mat-tab-group>
-
     <mat-tab label="Búsqueda por Twitter" class="texto">
-      <h2></h2>
+      <br>
       <label for="#"></label>
       <div class="cardgeneral">
         <div class="col-xs-12">
           <form class="formGroup" [formGroup]="tweetsform">
             <div class="input">
               <h2></h2>
-              <h1>Ingresa tu palabra</h1>
+              <h1>Realiza aquí tu consulta</h1>
               <input id="hashtags" type="text" class="form-control" name="formData" formControlName="formData"
                 autofocus>
               <h2></h2>
             </div>
             <div class="mx-auto" style="width: 200px; height: 50px;">
               <button class="btn btn-danger" (click)="searchcall()">Analizar</button>
+              <br>
+              <title></title>
             </div>
           </form>
         </div>
       </div>
-
       <label for=""></label>
-
-      <div class="resultado-twitter">
-        <mat-accordion>
-          <div *ngFor="let item of tweetsdata">
-            <div *ngFor="let object of item">
-              <h2></h2>
-              <mat-expansion-panel>
+      <br>
+      <mat-accordion>
+        <div class="cardgeneral3">
+          <div class="resultado-twitter">
+            <div *ngFor="let item of tweetsdata">
+              <br>
+              <div *ngFor="let object of item">
                 <h2></h2>
-                <mat-expansion-panel-header>
+                <mat-expansion-panel>
                   <h2></h2>
-                  <mat-panel-title>
-                    <img src="https://logos-marcas.com/wp-content/uploads/2020/04/Twitter-Logo.png" alt="1" width="30"
-                      height="20">
-                    <p>{{object.tweet}}</p>
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    Presione para ver entidades
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <div *ngFor="let analysis of object.analysis" class="card">
-                  <label for="#">Entidades encontradas en el tweet:</label>
-                  <p>{{analysis.type}}: {{analysis.text}} </p>
-                </div>
-              </mat-expansion-panel>
-              <h2></h2>
+                  <mat-expansion-panel-header>
+                    <h2></h2>
+                    <mat-panel-title>
+                      <label for=""></label>
+                      <img src="https://logos-marcas.com/wp-content/uploads/2020/04/Twitter-Logo.png" alt="1" width="34"
+                        height="20">
+                      <br>
+                      <p>{{object.tweet}}</p>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Presione para ver entidades
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div *ngFor="let analysis of object.analysis" class="card">
+                    <p>{{analysis.type}}: {{analysis.text}} </p>
+                  </div>
+                </mat-expansion-panel>
+              </div>
+              <br>
             </div>
           </div>
-        </mat-accordion>
-      </div>
+        </div>
 
+      </mat-accordion>
 
     </mat-tab>
-
     <mat-tab label="Búsqueda por texto Guardado">
       <label for=""></label>
       <h2></h2>
@@ -76,13 +76,12 @@
         <h2></h2>
         <div class="col-xs-12">
           <form class="formGroup" [formGroup]="palabra">
-<h2></h2>
-
+            <h2></h2>
             <div class="input-field col s12">
               <h1>Ingresa el nombre del documento</h1>
               <input id="hashtags" type="text" class="form-control" name="datos" formControlName="datos" autofocus>
-<h2></h2> 
-           </div>
+              <h2></h2>
+            </div>
             <div class="mx-auto" style="width: 300px;">
               <button class="btn btn-warning" (click)="archivo()">Traer archivo</button>
               <button class="btn btn-danger" (click)="nlu_text()">Analizar archivo</button>
@@ -91,31 +90,30 @@
           </form>
         </div>
       </div>
+
       <h2></h2>
-      <div class="cardtexto">
+      <div class="cardgeneral3">
         <div *ngFor="let item of res_text" class="col s12 m7">
-          <div class="card-content">
-            <p>{{item._body}}</p>
+          <br>
+          <div class="cardtexto">
+            <div class="card-content">
+              <p>{{item._body}}</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="cardtexto">
-        <div *ngFor="let item1 of respuesta" class="col s12 m7">
-          <div *ngFor="let item2 of item1" class="card-content">
-
-            <p></p>
-            <p>{{item2.type|json}}: {{item2.text}}</p>
+        <div class="cardtexto">
+          <div *ngFor="let item1 of respuesta" class="col s12 m7">
+            <div *ngFor="let item2 of item1" class="card-content">
+              <p></p>
+              <p>{{item2.type}}: {{item2.text}}</p>
+            </div>
           </div>
         </div>
+        <br>
       </div>
-
     </mat-tab>
-  
-
-
   </mat-tab-group>
-
-
+  
 </body>
 

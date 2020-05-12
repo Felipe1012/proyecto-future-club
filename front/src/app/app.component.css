@@ -4,10 +4,10 @@
     margin-bottom: 0px;
     padding-bottom: 5px;
     position: relative;
-    font-family: "Open Sans", sans-serif;
+    font-family: Impact, fantasy;
     color: #000000;
 
-  }
+}
 
 .col-xs-12{
   color: #000000;
@@ -17,12 +17,15 @@
   display: inline-block;
   left: 50%;
   margin-left: 180px;
+  font-style: oblique;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 100%;
   margin-left: 1px;
+  border-radius: 10px;
+
 
 }
 
@@ -34,39 +37,64 @@
 
 .cardgeneral {
   justify-content: center;
-  box-shadow: 10px 10px 32px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 32px 0 rgba(0, 0, 0, 0.747);
   transition: 0.3s;
-  width: 60%;
-  margin-left: 300px;
-  background-color: rgb(255, 255, 255);
+  width: 1000px;
+  height: 200px;
+  margin-left: 270px;
+  background-color: #f8f5f1;
   background-image: url("https://image.flaticon.com/icons/png/512/23/23681.png");
-  background-size: 200px;
-  background-position: left;
+  background-size: 100px;
+  background-position: center;
   background-repeat: no-repeat;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 20px;
 
 }
+.cardgeneral3 {
+  justify-content: center;
+  box-shadow: 10px 10px 32px 0 rgba(0, 0, 0, 0.747);
+  transition: 0.3s;
+  width: 1000px;
+  margin-left: 270px;
+  background-color: #f8f5f1;
+  background-image: url("https://image.flaticon.com/icons/png/512/23/23681.png");
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 20px;
+
+}
+
 .cardtexto {
   justify-content: center;
-  box-shadow: 10px 10px 32px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 60%;
-  margin-left: 300px;
-background-color: white;
+  width: 90%;
+  margin-left: 50px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+
+
 
 }
 
 
 .cardgeneral2 {
   justify-content: center;
-  box-shadow: 10px 10px 32px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 32px 0 rgba(0, 0, 0, 0.747);
   transition: 0.3s;
-  width: 60%;
-  margin-left: 300px;
-  background-color: rgb(255, 255, 255);
-  background-image: url("https://image.flaticon.com/icons/png/512/32/32329.png");
-  background-size: 200px;
-  background-position: left;
+  width: 1000px;
+  height: 250px;
+  margin-left: 270px;
+  background-color: #f8f5f1;
+  background-image: url("https://image.flaticon.com/icons/png/512/23/23681.png");
+  background-size: 100px;
+  background-position: center;
   background-repeat: no-repeat;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 20px;
 
 }
 .card:hover {
@@ -78,24 +106,18 @@ background-color: white;
   justify-content: center;
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 60%;
-  margin-left: 300px;
+  width: 90%;
+  margin-left: 50px;
 
 }
 
-  body {
-    background-color: rgb(255, 0, 0);
-
-background-image: url("https://wallpapercave.com/wp/wp2092975.jpg");
-background-repeat: no-repeat;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-
-  }
   
 .texto{
   color: #4301fa;
 }
 
+.footer{
+  background-color: rgb(255, 0, 0);
+  background-image: url("https://image.flaticon.com/icons/png/512/23/23681.png");
+
+}
